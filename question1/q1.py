@@ -23,7 +23,7 @@ for e in results.keys():
                 err=True
             elif err==True and results[e][i]!="-":
                 err=False
-                print(e,gettime.gettime(timepoints[e][i],results[e][i])-gettime.gettime(timepoints[e][start],0),"since",gettime.gettime(timepoints[e][start],0))
+                print(e,"was under error for",gettime.gettime(timepoints[e][i],results[e][i])-gettime.gettime(timepoints[e][start],0),"since",gettime.gettime(timepoints[e][start],0))
             if i==len(results[e])-1 and err:
                 print(e,"under error since",gettime.gettime(timepoints[e][start],0))
                 break
